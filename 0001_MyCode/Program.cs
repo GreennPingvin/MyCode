@@ -27,4 +27,6 @@ namespace _0001_MyCode
             return sb.ToString( );
         }
     }
+
+    record Point( int X, int Y );
 }
