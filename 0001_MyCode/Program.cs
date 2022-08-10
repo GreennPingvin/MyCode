@@ -7,6 +7,11 @@ namespace _0001_MyCode
     {
         static void Main( string[] args ) { }
 
+        public static List<T> CreateList<T>( params T[] elements )
+        {
+            return new List<T>(elements);
+        }
+
         public static int Max( params int[] numbers )
         {
             int max = numbers[0];
