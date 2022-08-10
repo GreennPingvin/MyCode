@@ -11,11 +11,6 @@ namespace _0001_MyCode
         }
     }
 
-    public static class MyMethods
-    {
-
-    }
-
     class StringWrapper
     {
         string _str;
