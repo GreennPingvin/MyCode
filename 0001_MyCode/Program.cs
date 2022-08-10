@@ -5,7 +5,18 @@ namespace _0001_MyCode
 {
     class Program
     {
-        static void Main( string[] args ) { }
+        static void Main( string[] args )
+        {
+            var list = CreateList(
+                    new { Number = 10, Name = "Smith" },
+                    new { Number = 10, Name = "John" }
+            ).ToList( );
+
+            foreach (var item in list)
+            {
+                WriteLine($"Number - {item.Number}, Name = {item.Name}");
+            }
+        }
 
         public static List<T> CreateList<T>( params T[] elements )
         {
