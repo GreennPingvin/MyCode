@@ -5,9 +5,22 @@ namespace _0001_MyCode
 {
     class Program
     {
-        static void Main( string[] args )
-        {
+        static void Main( string[] args ) { }
 
+        public static int Max( params int[] numbers )
+        {
+            int max = numbers[0];
+
+            for (var i = 1; i < numbers.Length; i++)
+            {
+                var current = numbers[i];
+                if (max < current)
+                {
+                    max = current;
+                }
+            }
+
+            return max;
         }
     }
 
