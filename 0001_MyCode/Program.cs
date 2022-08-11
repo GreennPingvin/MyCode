@@ -40,6 +40,17 @@ namespace _0001_MyCode
         }
     }
 
+    public static class MyHelpers
+    {
+        public static void PrintAll<T>( this IEnumerable<T> enumerable )
+        {
+            foreach (T item in enumerable)
+            {
+                Write($"{item} ");
+            }
+        }
+    }
+
     class StringWrapper
     {
         string _str;
