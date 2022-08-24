@@ -16,6 +16,10 @@ namespace _0001_MyCode
             {
                 WriteLine($"Number - {item.Number}, Name = {item.Name}");
             }
+
+            int[] a = { 1, 2, 3, 4 };
+            int[] b = { 4, 16, 1, 2, 3, 22 };
+            Concat(a, b).PrintAll(  );
         }
 
         public static List<T> CreateList<T>( params T[] elements )
@@ -37,6 +41,23 @@ namespace _0001_MyCode
             }
 
             return max;
+        }
+
+        public static T[] Concat<T>( T[] arr1, T[] arr2 )
+        {
+            T[] result = new T[arr1.Length + arr2.Length];
+
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                result[i] = arr1[i];
+            }
+
+            for (int j = 0; j < arr2.Length; j++)
+            {
+                result[arr1.Length + j] = arr2[j];
+            }
+
+            return result;
         }
     }
 
